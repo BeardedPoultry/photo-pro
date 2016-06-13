@@ -1,18 +1,38 @@
-<header>
+<header class="">
+  {{#link-to "index" class="headerlink"}}
   <div class="logo">
     <div class="internalLogo">
-      <img src="dist/assets/images/logo.png" alt="" />
+      <img src="assets/images/logo.png" alt="" />
     </div>
   </div>
+  {{/link-to}}
+
   <nav>
+    <ul class="mainNav">
+      {{#link-to "about" class="headerlink"}}About Me{{/link-to}}
+      <li>{{#link-to "portfolio.index" class="headerlink"}}My Work{{/link-to}}</li>
+    </ul>
+  </nav>
+  <nav class="lowernav">
     <ul>
-      <li>{{#link-to "portfolio.family" class="headerlink"}}Family{{/link-to}}</li>
-      <li>{{#link-to "portfolio.mn" class="headerlink"}}Maternity{{/link-to}}</li>
-      <li>{{#link-to "portfolio.nature" class="headerlink"}}Nature{{/link-to}}</li>
-      <li>{{#link-to "portfolio.special-event" class="headerlink"}}Special Events{{/link-to}}</li>
+      <li>{{#link-to "portfolio.family" class="headerlink" id="spreader"}}Family{{/link-to}}</li>
+      <li>{{#link-to "portfolio.mn" class="headerlink" id="spreader"}}Maternity{{/link-to}}</li>
+      <li>{{#link-to "portfolio.nature" class="headerlink" id="spreader"}}Nature{{/link-to}}</li>
+      <li>{{#link-to "portfolio.special-event" class="headerlink" id="spreader"}}Special Events{{/link-to}}</li>
     </ul>
   </nav>
 </header>
+<body>
+  <div class="image-opacity">
+  <img class="main-index-img" src="assets/images/edit-8320.jpg" alt="" />
+  </div>
+  {{#link-to "booking" class="headerlink" id="spreader"}}
+  <div class="appoint">
+      <p class="topappoint">Book an</p>
+      <p class="botappoint">Appointment</p>
+  </div>
+  {{/link-to}}
+</body>
 <footer>
   <p class="copyright-notice">
     <i class="fa fa-copyright"></i> 2017 Emelee's Photography
