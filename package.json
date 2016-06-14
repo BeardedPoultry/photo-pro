@@ -1,7 +1,7 @@
 {
-  "name": "finalproject",
-  "version": "0.0.0",
-  "description": "Small description for finalproject goes here",
+  "name": "photo-pro",
+  "version": "0.0.1",
+  "description": "Web application for further photography needs.",
   "private": true,
   "directories": {
     "doc": "doc",

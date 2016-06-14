@@ -24,6 +24,7 @@
   }
   .internalLogo {
     background-image:image("dist/assets/images/logo.png");
+    background-size: 200px;
   }
   .mainNav {
     padding-left: 0;
@@ -38,6 +39,8 @@
     right: 0;
     bottom: 40px;
     position: fixed;
+    /*background-color: rgba(10, 10, 10, 0.9);*/
+    z-index: 1;
   }
   .copyright-notice {
     margin-left: 7.5%;
@@ -127,9 +130,10 @@
     z-index: -1;
   }
   .appoint {
-    width: 150px;
+    height: 100px;
+    width: 250px;
     margin-top: 50px;
-    margin-left: 72.5%;
+    margin-left: 65%;
     background-color: RGBA(59, 136, 154, 1.00);
     color: white;
     text-align: center;
@@ -140,10 +144,14 @@
     z-index: 1;
   }
   .topappoint {
-    margin-bottom: 0;
+    margin-bottom: 7px;
+    font-size: 2em;
+    font-weight: 100;
   }
   .botappoint {
     margin-top: 0;
+    font-size: 2em;
+    font-weight: 100;
   }
   #top-photo {
     margin-top: 110px;
