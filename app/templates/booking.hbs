@@ -1,12 +1,22 @@
-<header class="clearfix">
-  <img class="logo"src="assets/images/Liggett.png" alt="" />
-  <div class="header-link-container">
-    {{#link-to "portfolio" class="headerlink"}}Portfolio{{/link-to}}
-    {{#link-to "about" class="headerlink"}}About Me{{/link-to}}
-    {{#link-to "login" class="headerlink"}}Sign In{{/link-to}}
+<header class="">
+  <div class="logo">
+    <div class="internalLogo">
+      <img src="assets/images/logo.png" alt="" />
+    </div>
   </div>
+  <nav>
+    <ul class="mainNav">
+      <li>
+        {{#link-to "about" class="headerlink"}}About Me{{/link-to}}
+      </li>
+      <li>
+        {{#link-to "portfolio.index" class="headerlink"}}My Work{{/link-to}}
+      </li>
+    </ul>
+  </nav>
 </header>
-  <div class="booking-information">
+<form class="booking-information" action="submit" method="post">
+  <div class="">
     <h1 class="booking-header">Booking Information</h1>
     <hr class="booking-divider">
     <div class="bdc">
@@ -31,8 +41,9 @@
         <option value="Internet">Internet</option>
       </select>
     <h2>Detail the specifics below please.</h2>
-    <textarea name="name" value=model.bookingDetails rows="8" cols="60" placeholder="What types of shots are you wanting.."></textarea>
-    <button type="submit-booking-information" name="Submit" {{action "createBooking" model}}></button>
-
+    <textarea name="name" value="model.bookingDetails" rows="8" cols="60" placeholder="What types of shots are you wanting.."></textarea>
+    <button type="submit-booking-information" name="Submit" {{action "createBooking" model}}>
+    </button>
   </div>
+</form>
 {{outlet}}

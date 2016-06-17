@@ -1,4 +1,3 @@
-
 /* media screen request size */
 /* Styling for Desktop Size*/
 @media all and (min-width: 520px) {
@@ -194,22 +193,8 @@
     padding-top: 10px;
     border-radius: 5px;
   }
-  .about-me-pic {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    margin-left: 40%;
-    margin-right: 40%;
-
-  }
   .booking-information {
-    margin-top: 115px;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: rgba(190, 216, 244, 1);
-  }
-  .booking-example {
-    width:300px;
+    background-color: RGBA(59, 136, 155, .3);
   }
 
 }
