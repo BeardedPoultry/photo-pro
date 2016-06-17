@@ -1,9 +1,11 @@
 <header class="">
+  {{#link-to "index" class="headerlink"}}
   <div class="logo">
     <div class="internalLogo">
       <img src="assets/images/logo.png" alt="" />
     </div>
   </div>
+  {{/link-to}}
   <nav>
     <ul class="mainNav">
       <li>
@@ -14,36 +16,43 @@
       </li>
     </ul>
   </nav>
+  {{portfolio.family}}
 </header>
-<form class="booking-information" action="submit" method="post">
-  <div class="">
-    <h1 class="booking-header">Booking Information</h1>
-    <hr class="booking-divider">
-    <div class="bdc">
-      <h2 class="contact-purposes">Your email address for contact purposes</h2>
-      {{input class="email-field" type="text" name="email-entry" value=model.emailAddress placeholder="email@example.com"}}
-    </div>
-    <div class="first-name-div">
-      <h2>First Name</h2>
-      {{input type="text" name="first-name" value=model.firstName placeholder="First Name"}}
-    </div>
-    <div class="last-name-div">
-      <h2>Last Name</h2>
-      {{input type="text" name="last-name" value=model.lastName placeholder="Last Name"}}
-    </div>
-    <h2>Phone number that I can reach you at?</h2>
-    {{input type="text" name="phone-number" value=model.phoneNumber placeholder="(555)555-5555"}}
-    <h2>How did you hear of me?</h2>
-    <select name="referral-type" value="">
-        <option value="Please Select" selected>Please Select</option>
-        <option value="Word of mouth">Word of mouth</option>
-        <option value="Advert">Advertisement</option>
-        <option value="Internet">Internet</option>
-      </select>
-    <h2>Detail the specifics below please.</h2>
-    <textarea name="name" value="model.bookingDetails" rows="8" cols="60" placeholder="What types of shots are you wanting.."></textarea>
-    <button type="submit-booking-information" name="Submit" {{action "createBooking" model}}>
-    </button>
-  </div>
-</form>
+<body>
+    <form class="booking-information" action="submit" method="post">
+      <div class="">
+        <div class="">
+          <h2 class="contact-purposes">Email</h2>
+          {{input class="email-field" type="text" name="email-entry" value=model.emailAddress placeholder="email@example.com"}}
+        </div>
+        <div class="first-name-div">
+          <h2>First name</h2>
+          {{input type="text" name="first-name" value=model.firstName placeholder="Jane"}}
+        </div>
+        <div class="last-name-div">
+          <h2>Last name</h2>
+          {{input type="text" name="last-name" value=model.lastName placeholder="Smith"}}
+        </div>
+        <h2>Your best contact number</h2>
+        {{input type="text" name="phone-number" value=model.phoneNumber placeholder="(555) 555-5555"}}
+        <h2>How did you hear about me?</h2>
+        <select name="referral-type" value="">
+            <option value="Please Select" selected>Click to pick</option>
+            <option value="Word of mouth">Friend/Family</option>
+            <option value="Advert">Social Media</option>
+            <option value="Internet">Previous Client</option>
+          </select>
+        <h2>Extras</h2>
+        <textarea name="name" value="model.bookingDetails" rows="8" cols="60" placeholder="Let me know how I may help you!"></textarea>
+        <button type="submit-booking-information" name="Submit" {{action "createBooking" model}}>
+        Submit</button>
+      </div>
+    </form>
+</body>
+<footer>
+  <p class="copyright-notice">
+    <i class="fa fa-copyright"></i> 2017 Emelee's Photography
+  </p>
+</footer>
+
 {{outlet}}
