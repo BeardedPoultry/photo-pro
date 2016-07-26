@@ -1,90 +1,56 @@
-.booking-header {
-  text-align: center;
-  margin-bottom: 0;
-}
-.booking-divider {
-  width: 90%;
-  margin: 0 auto;
-}
-.button-container {
-  height: 75px;
-  }
-button {
-  width: 70%;
-  background-color: rgba(151, 188, 204, 1);
-  height: 20px;
-  margin-bottom: 10px;
-  margin-top: 5px;
-  border-radius: 15px;
-  margin-left: 15%;
-  margin-right: 15%;
-}
-.user-login-splash {
-  margin-top: 115px;
-  margin-left: 5%;
-  margin-right: 5%;
-  color: black;
-  position: relative;
-}
-#profile-name {
-  text-align: center;
-}
-.link-to-booking {
-  font-family: 'Ubuntu', sans-serif;
-  background-image: url('/assets/images/Edit-4588.jpg');
-  padding-top: 22px;
-  padding-bottom: 22px;
-  height: 60px;
-  width: 400px;
-  display: block;
-  text-align: center;
-  padding-top: 15px;
-  border-radius: 15px;
-}
-.link-to-portfolio {
-  font-family: 'Ubuntu', sans-serif;
-  /*background-image: url('/assets/images/');*/
-  background-color: rgba(226, 226, 226, 1);
-  padding-top: 22px;
-  padding-bottom: 22px;
-  height: 60px;
-  width: 400px;
-  display: block;
-  text-align: center;
-  padding-top: 15px;
-  border-radius: 15px;
-}
 /* media screen request size */
 /* Styling for Desktop Size*/
 @media all and (min-width: 520px) {
   body {
     margin: 0 auto;
-    color: RGBA(102, 102, 102, 1.00);
+    height: auto;
+    background-color: rgba(0 , 0, 0, 1);
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
   }
   header {
     height: 100px;
-    width:100%;
-    margin-bottom: 15px;
+    width: 40%;
+    margin-left: 7.5%;
+    margin-top: 50px;
     display: inline-block;
     position: fixed;
+    font-size: 2em;
+    z-index: 10;
   }
   .logo {
     height: auto;
     width: auto;
-    background-color: grey;
-    display: block;
+    display: inline-block;
   }
   .internalLogo {
     background-image:image("dist/assets/images/logo.png");
-    background-color: grey;
+    background-size: 200px;
+    margin-bottom: 20px;
   }
+  .mainNav {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 200;
+  }
+
+.about_me_bg{
+  background-image: url("../public/assets/images/about_me_bg.jpg");
+  height: 300px;
+  position: fixed;
+  top: 0;
+  z-index: -5;
+}
+
   footer {
     box-sizing: border-box;
     height:40px;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 40px;
     position: fixed;
+    z-index: 1;
   }
   .copyright-notice {
     margin-left: 7.5%;
@@ -92,6 +58,7 @@ button {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 1em;
+    font-weight: 200;
     width: 85%;
     text-align: left;
     color: RGBA(102, 102, 102, 1.00);
@@ -101,26 +68,33 @@ button {
   nav ul li {
     list-style-type: none;
   }
-  .headerlink {
-    text-decoration: underline;
-    background-color: rgba(203, 224, 159, 1);
-    margin-top: 50px;
-
+  ul {
+    padding-left: 0;
   }
-  /*.headerlink-button {
-    background-color: rgba(203, 224, 159, 1);
-    margin-left: 1%;
-    margin-right: 1%;
-    border-radius: 15px;
-    color: white;
-    width: 75px;
-    height: 50px;
-    font-size: 1em;
-    border: none;
-  }*/
-  /*.headerlink:hover {
-    background-color: rgba(71, 121, 72, 1);
-  }*/
+  .headerlink {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 0;
+    font-weight: 100;
+    letter-spacing: .05em;
+    line-height: 1.75em;
+  }
+
+  .secondary_nav{
+    font-size: .75em;
+    text-decoration: underline;
+  }
+
+  .lowernav {
+    font-size: .5em;
+    text-decoration: underline;
+  }
+  #spreader {
+    padding-top: 10px;
+    display: inline-block;
+    text-decoration: underline;
+    font-weight: 200;
+  }
   .clearfix::after {
     content: "";
     display: table;
@@ -132,7 +106,17 @@ button {
     float: right;
     text-align: right;
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 10px;
+  }
+  .familyimages,
+  .maternity-photos,
+  .natureimages,
+  .special {
+    width: 70%;
+    margin-left: 31%;
+    /* display: inline-block; */
+    position: absolute;
+    margin-top: 130px;
   }
   .family-page-photo,
   .nature-page-photo,
@@ -141,28 +125,34 @@ button {
     width: 75%;
     margin-left: 12.5%;
     margin-right: 12.5%;
-    border-radius: 7px;
-    border-color: rgba(254, 255, 153, .5);
-    border-style: inset;
-    border-width: 7px;
-  }
-  .main-page-photo {
-    margin-top: 107px;
-    position: fixed;
-    width: 77.5%;
-    margin-left: 11.25%;
-    margin-right: 11.25%;
-    border-radius: 7px;
-    border-color: rgba(254, 255, 153, .5);
-    border-style: inset;
-    border-width: 7px;
+    margin-bottom: 35px;
   }
   .main-index-img {
-    margin-top: 105px;
     width: 100%;
-    z-index: -1;
     position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+
+  .appoint {
+    margin-top: 35px;
+    margin-left: 64%;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .appoint img{
+    max-width: 85%;
+  }
+  /*.topappoint {
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 7px;
+    font-size: 2em;
+    font-weight: 100;
+  }*/
   #top-photo {
     margin-top: 110px;
   }
@@ -179,10 +169,10 @@ button {
     margin-right: 10%;
   }
   .pagebreak {
-    width: 97%;
-    background-color: rgba(71, 121, 72, 1);
-    border-radius: 75%;
-    height: 5px;
+    /*width: 67%;
+    background-color: RGBA(59, 136, 155, 1.00);
+    height: 2px;*/
+    display: none;
   }
   .copyright-page-break {
     width: 50%;
@@ -192,248 +182,102 @@ button {
     text-decoration: underline;
   }
   .about-me-intro {
-    margin-top: 115px;
-    position: absolute;
-    margin-left: 5%;
-    margin-right: 5%;
-    color: rgba(86, 54, 31, 1);
-    background-color: rgba(71, 121, 72, .5);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    border-radius: 5px;
+    display: inline-block;
+    margin-top: 230px;
+    margin-left: 28%;
+    margin-right: 8%;
+    background-color: RGBA(0, 0, 0, .50);
+    z-index: 5;
+    position: fixed;
+    bottom: 187px;
+    box-sizing: border-box;
+    padding: 1% 5%;
   }
-  .about-me-pic {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    margin-left: 40%;
-    margin-right: 40%;
+
+  .about-me-intro p{
+    color: #fff;
+    line-height: 2.3;
+    font-family: Georgia, serif;
+    font-size: 1.1em;
 
   }
-  .booking-information {
-    margin-top: 115px;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: rgba(190, 216, 244, 1);
+
+  h2{
+    font-size: 1.2em;
+    display: inline-block;
+    vertical-align: top;
   }
-  .booking-example {
-    width:300px;
+
+  input{
+    -webkit-appearance: none;
+    width: 55%;
+    height: 35px;
+    border: none;
+    font-size: 1em;
+    text-indent: 10px;
+    float: right;
+    color: #444;
+  }
+
+  textarea{
+    -webkit-appearance: none;
+    border: none;
+    width: 100%;
+    font-size: 1em;
+    padding: 2%;
+    box-sizing: border-box;
+  }
+
+  button{
+    -webkit-appearance: none;
+    background: transparent;
+    border: solid 2px #fff;
+    width: 35%;
+    /* text-align: center; */
+    font-size: 1em;
+    padding: 8px;
+    margin-top: 15px;
+    color: #fff;
+    margin-left: 65%;
+  }
+
+  select{
+    -webkit-appearance: none;
+    height: 36px;
+    width: 55.5%;
+    background: #fff;
+    border-radius: 0;
+    border: none;
+    float: right;
+    color: #bcbcbc;
+    text-indent: 10px;
+    font-size: 1em;
+  }
+
+  .booking-information {
+    color: #fff;
+    background-color: RGBA(59, 136, 155, 1);
+    width: 60%;
+    margin-right: 10%;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 3% 5%;
+    margin-top: 85px;
+    float: right;
+  }
+  .booking-header {
+    width: 65%;
+    margin-left: 27.5%;
+    margin-top: 0;
+    color: RGBA(102, 102, 102, 1.00);
+    font-weight: 100;
+  }
+  textarea {
+
+    resize: none;
   }
 
 }
 /* Styling for Mobile Size*/
 
 /*@media all and (max-width: 519px) {
-  body {
-    margin: 0 auto;
-    background: rgba(71, 121, 72, .6);
-  }
-  header {
-    height: 100px;
-    width:100%;
-    margin-bottom: 15px;
-    background-color: rgba(151, 188, 204, 1);
-    position: fixed;
-    top: 0;
-    border-bottom-color: rgba(203, 224, 159, 1);
-    border-bottom-style: inset;
-    border-bottom-width: 5px;
-  }
-  footer {
-    box-sizing: border-box;
-    height:60px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    background-color: rgba(151, 188, 204, 1);
-    text-align: center;
-  }
-  .copyright-notice {
-    margin-left: 5%;
-    margin-right: 5%;
-    color: rgba(254, 255, 153, 1);
-    position: fixed;
-    z-index: 1;
-  }
-  .headerlink {
-    font-family: 'Ubuntu', sans-serif;
-    text-decoration: none;
-    color: white;
-    margin-left: 1%;
-    margin-right: 1%;
-    border-radius: 15px;
-    max-width: 250px;
-    height: 50px;
-    transition: background-color 0.5s ease;
-    background-color: rgba(203, 224, 159, 1);
-  }
-  .headerlink-button {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: rgba(203, 224, 159, 1);
-    margin-left: 1%;
-    margin-right: 1%;
-    border-radius: 15px;
-    color: white;
-    width: 75px;
-    height: 20px;
-    font-size: 1em;
-    border: none;
-  }
-  .link-to-booking {
-  text-decoration: none;
-  }
-  .past-requests {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .headerlink:hover {
-    background-color: rgba(71, 121, 72, 1);
-    cursor: pointer;
-  }
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .logo {
-    height: 60px;
-    margin-top: 10px;
-    margin-left: 10px;
-    position: relative;
-    padding-top: 10px;
-  }
-  .header-link-container {
-    width: calc(100% - 112px);
-    float: right;
-    text-align: right;
-    display: inline-block;
-    margin-top: 50px;
-  }
-  .family-page-photo,
-  .nature-page-photo,
-  .main-index,
-  .main-page-photo {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 7px;
-    border-color: rgba(203, 224, 159, 1);
-    border-width: 3px;
-    border-style: solid;
-  }
-  .main-index-img {
-    margin-top: 105px;
-    width: 200%;
-    z-index: -1;
-    position: fixed;
-    padding-left:
-  }
-  .portfolio-index-img {
-    margin-top: 100px;
-    width: 200%;
-    margin-left: -220px;
-    position: fixed;
-    z-index: -1;
-  }
-  .spacing {
-    margin-top: 115px;
-  }
-  .main-page-photo {
-    margin-top: 115px;
-  }
-  #top-photo {
-    margin-top: 110px;
-  }
-
-  .portfolio-heading {
-    height: 800px;
-    width:80%;
-    margin-top: 110px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  .pagebreak {
-    width: 97%;
-    background-color: rgba(71, 121, 72, 1);
-    border-radius: 75%;
-    height: 5px;
-  }
-  .copyright-page-break {
-    width: 50%;
-  }
-  .about-myself {
-    text-align: right;
-    text-decoration: underline;
-  }
-  .about-me-intro {
-    margin-top: 115px;
-    position: absolute;
-    margin-left: 5%;
-    margin-right: 5%;
-    color: rgba(86, 54, 31, 1);
-    background-color: rgba(71, 121, 72, .5);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-  }
-  .about-me-pic {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    margin-left: 40%;
-    margin-right: 40%;
-  }
-  .login-screen {
-    text-align: center;
-    margin-left: 35%;
-    margin-right: 35%;
-    margin-top: 115px;
-    border-color: rgba(86, 54, 31, .5);
-    border-width: 5px;
-    border-style: solid;
-  }
-  .booking-information {
-    margin-top: 115px;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: rgba(190, 216, 244, 1);
-  }
-  .contact {
-    margin-left: 3%;
-    margin-right: 3%;
-    width: 94%;
-    text-align: center;
-  }
-  .booking-header {
-    text-align: center;
-  }
-  .bdc {
-    margin-top: 5px;
-    border-style: solid;
-    border-color: white;
-    border-width: 5px;
-  }
-  .contact-purposes {
-    padding-left: 15px;
-  }
-  .booking-example {
-    width:300px;
-  }
-  .email-field {
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 70%;
-  }
-  .first-name-div {
-    width: 50%;
-    display: inline-block;
-  }
-  .last-name-div {
-    float: right;
-    width: 50%;
-  }
-}*/
